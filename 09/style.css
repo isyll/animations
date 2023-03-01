@@ -1,5 +1,84 @@
+
+:root {
+    --band-width : 60px;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat' sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+div.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 300px;
+    border: 5px solid white;
+    text-align: center;
+    font-size: 2em;
+    cursor: pointer;
+    /* overflow: hidden; */
+}
+
+div.box > div.sq {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+    transition-property: background-color color;
+    transition-duration: 500ms;
+}
+
+div.box > div.sq::before {
+    content: "HOVERABLE";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    padding: 50px 0;
+    transition: transform 1s ease 0s;
+}
+
+div.box > div.sq::after {
+    content: "HOVERABLE";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    padding: 50px 0;
+    transition: transform 1500ms ease 0s;
+}
+
+div.box:hover > div.sq {
+    background-color: white;
+    color: black;
+}
+
+div.box:hover > div.sq::before {
+    transform: translateX(-100%) rotateY(180deg);
+}
+
+div.box:hover > div.sq::after {
+    transform: translateX(100%) rotateY(180deg);
 }
