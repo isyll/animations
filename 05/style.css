@@ -40,7 +40,7 @@ div.box {
 div.box > div.sq {
     position: absolute;
     width: 400px;
-    height: 250px;
+    height: 450px;
     background-color: red;
     border: 10px solid white;
     transform: translateX(-100%) translateY(100%) rotate(45deg);
@@ -49,9 +49,6 @@ div.box > div.sq {
 }
 
 div.box:hover > div.sq {
-    transform: translateX(100%) translateY(-100%) rotate(45deg);
-}
-div.box:hover > span {
-
+    transform: translateX(0) translateY(0) rotate(45deg);
 }
 
