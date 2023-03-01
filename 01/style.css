@@ -64,37 +64,53 @@ body {
     z-index: 1;
 }
 
-.sq1-border-top-bottom {
-    height: 100%;
-    width: 0;
-    border-top: 5px solid #ffffff;
-    border-bottom: 5px solid #ffffff;
-    transition: width 400ms ease 0ms;
-}
-.sq1-border-right-left {
-    height: 0;
-    width: 100%;
-    border-right: 5px solid #ffffff;
-    border-left: 5px solid #ffffff;
-    transition: height 400ms ease 400ms;
+.sq-border {
+    background-color: #ffffff;
+    position: absolute;
+    width: 0px;
+    height: 0px;
 }
 
-.sq2-border-top-bottom {
-    height: 100%;
-    width: 0;
-    border-top: 5px solid #ffffff;
-    border-bottom: 5px solid #ffffff;
-    transition: width 400ms ease 800ms;
-}
-.sq2-border-right-left {
-    height: 0;
-    width: 100%;
-    border-right: 5px solid #ffffff;
-    border-left: 5px solid #ffffff;
-    transition: height 400ms ease 1200ms;
+.sq1-border-top{transition: width 400ms ease-out 0ms;}
+.sq1-border-right{transition: height 400ms ease-out 400ms;}
+.sq1-border-left{transition: height 400ms ease-out 400ms;}
+.sq1-border-bottom{transition: width 400ms ease-out 0ms;}
+
+.sq2-border-top{transition: width 400ms ease-out 800ms;}
+.sq2-border-right{transition: height 400ms ease-out 1200ms;}
+.sq2-border-left{transition: height 400ms ease-out 1200ms;}
+.sq2-border-bottom{transition: width 400ms ease-out 800ms;}
+
+.box:not(:hover) > .sq > .sq-border {
+    width: 0px;
+    height: 0px;
 }
 
-div.box:hover > .sq2-border-top-bottom {
+.box:hover > .square1 > .sq1-border-top,
+.box:hover > .square2 > .sq2-border-top {
     width: 100%;
+    height: var(--border-width);
+    top: 0;
+}
+
+.box:hover > .square1 > .sq1-border-right,
+.box:hover > .square2 > .sq2-border-right {
+    width: var(--border-width);
+    height: 100%;
+    right: 0;
+}
+
+.box:hover > .square1 > .sq1-border-left,
+.box:hover > .square2 > .sq2-border-left {
+    width: var(--border-width);
+    height: 100%;
+    left: 0;
+}
+
+.box:hover > .square1 > .sq1-border-bottom,
+.box:hover > .square2 > .sq2-border-bottom {
+    width: 100%;
+    height: var(--border-width);
+    bottom: 0;
 }
 
