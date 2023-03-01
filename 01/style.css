@@ -1,5 +1,116 @@
+:root {
+    --border-width:5px;
+}
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+    font-family: 'Montserrat', sans-serif;
 }
+
+body {
+    background-color: black;
+}
+
+.white {
+    color: white;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.box {
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+.sq {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+}
+
+.sq > .text {
+    font-weight: bold;
+    width: min-content;
+    word-spacing: 2rem;
+    transform: rotate(-45deg);
+}
+
+.square1 {
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    z-index: -1;
+}
+
+.square2 {
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    transform: rotate(45deg);
+    text-align: center;
+    z-index: 1;
+}
+
+.sq-border {
+    background-color: #ffffff;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+}
+
+.sq1-border-top{transition: width 400ms ease-out 0ms;}
+.sq1-border-right{transition: height 400ms ease-out 400ms;}
+.sq1-border-left{transition: height 400ms ease-out 400ms;}
+.sq1-border-bottom{transition: width 400ms ease-out 0ms;}
+
+.sq2-border-top{transition: width 400ms ease-out 800ms;}
+.sq2-border-right{transition: height 400ms ease-out 1200ms;}
+.sq2-border-left{transition: height 400ms ease-out 1200ms;}
+.sq2-border-bottom{transition: width 400ms ease-out 800ms;}
+
+.box:not(:hover) > .sq > .sq-border {
+    width: 0px;
+    height: 0px;
+}
+
+.box:hover > .square1 > .sq1-border-top,
+.box:hover > .square2 > .sq2-border-top {
+    width: 100%;
+    height: var(--border-width);
+    top: 0;
+}
+
+.box:hover > .square1 > .sq1-border-right,
+.box:hover > .square2 > .sq2-border-right {
+    width: var(--border-width);
+    height: 100%;
+    right: 0;
+}
+
+.box:hover > .square1 > .sq1-border-left,
+.box:hover > .square2 > .sq2-border-left {
+    width: var(--border-width);
+    height: 100%;
+    left: 0;
+}
+
+.box:hover > .square1 > .sq1-border-bottom,
+.box:hover > .square2 > .sq2-border-bottom {
+    width: 100%;
+    height: var(--border-width);
+    bottom: 0;
+}
+
