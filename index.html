@@ -6,16 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Montserrat, sans-serif;
+        }
 
-    <title>04</title>
+        a, a:visited {
+            color: blue;
+        }
+
+        div.nav > ul {
+            text-align: center;
+        }
+
+        div.nav > ul > li {
+            display: inline;
+            list-style: none;
+            font-size: 1.5rem;
+        }
+    </style>
+    <title>ANIMATIONS</title>
 </head>
 <body>
-    
-    
+
     <div class="container">
         <div class="nav">
+            <h1> Quelle animation souhaitez-vous voir ?</h1>
             <ul>
                 <li><a href="../01/index.html">01</a></li>
                 <li><a href="../02/index.html">02</a></li>
@@ -30,15 +49,7 @@
                 <li><a href="../11/index.html">11</a></li>
             </ul>
         </div>
-
-        <div class="box">
-                <span>HOVERABLE</span>
-                
-            <div class="sq"></div>
-
-        </div>
-
     </div>
-
+    
 </body>
 </html>

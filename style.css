@@ -1,13 +1,15 @@
-
-:root {
-    --band-width : 60px;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat' sans-serif;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a, a:visited {
+    color: blue;
 }
 
 div.nav {
@@ -17,6 +19,6 @@ div.nav {
 
 div.nav > ul > li {
     display: inline;
-
     list-style: none;
+    font-size: 1.5rem;
 }
