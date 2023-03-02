@@ -22,3 +22,7 @@ div.nav > ul > li {
     list-style: none;
     font-size: 1.5rem;
 }
+
+div.nav > ul > li:not(:last-child) {
+    margin-right: 20px;
+}
