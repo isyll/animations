@@ -2,13 +2,6 @@
     --border-width:5px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    /* box-sizing: border-box; */
-    font-family: 'Montserrat', sans-serif;
-}
-
 body {
     background-color: black;
 }
@@ -80,11 +73,6 @@ body {
 .sq2-border-right{transition: height 400ms ease-out 1200ms;}
 .sq2-border-left{transition: height 400ms ease-out 1200ms;}
 .sq2-border-bottom{transition: width 400ms ease-out 800ms;}
-
-.box:not(:hover) > .sq > .sq-border {
-    width: 0px;
-    height: 0px;
-}
 
 .box:hover > .square1 > .sq1-border-top,
 .box:hover > .square2 > .sq2-border-top {
