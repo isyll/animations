@@ -58,47 +58,55 @@ body {
 }
 
 .sq-border {
-    background-color: #ffffff;
+    height: 0;
+    width: 0;
     position: absolute;
-    width: 0px;
-    height: 0px;
 }
 
-.sq1-border-top{transition: width 400ms ease-out 0ms;}
-.sq1-border-right{transition: height 400ms ease-out 400ms;}
-.sq1-border-left{transition: height 400ms ease-out 400ms;}
-.sq1-border-bottom{transition: width 400ms ease-out 0ms;}
-
-.sq2-border-top{transition: width 400ms ease-out 800ms;}
-.sq2-border-right{transition: height 400ms ease-out 1200ms;}
-.sq2-border-left{transition: height 400ms ease-out 1200ms;}
-.sq2-border-bottom{transition: width 400ms ease-out 800ms;}
-
-.box:hover > .square1 > .sq1-border-top,
-.box:hover > .square2 > .sq2-border-top {
-    width: 100%;
-    height: var(--border-width);
-    top: 0;
-}
-
-.box:hover > .square1 > .sq1-border-right,
-.box:hover > .square2 > .sq2-border-right {
-    width: var(--border-width);
+.sq1-border-height,
+.sq2-border-height {
     height: 100%;
-    right: 0;
+    width: 0;
+    border-top:  var(--border-width) solid white;
+    border-bottom:  var(--border-width) solid white;
 }
 
-.box:hover > .square1 > .sq1-border-left,
-.box:hover > .square2 > .sq2-border-left {
-    width: var(--border-width);
-    height: 100%;
-    left: 0;
-}
-
-.box:hover > .square1 > .sq1-border-bottom,
-.box:hover > .square2 > .sq2-border-bottom {
+.sq1-border-width,
+.sq2-border-width {
+    height: 0;
     width: 100%;
-    height: var(--border-width);
-    bottom: 0;
+    border-right:  var(--border-width) solid white;
+    border-left:  var(--border-width) solid white;
 }
 
+.sq1-border-height {
+    transition: width .5s;
+}
+
+.sq1-border-width {
+    transition: height .5s .5s;
+}
+
+.sq2-border-height {
+    transition: width .5s 1s;
+}
+
+.sq2-border-width {
+    transition: height .5s 1.5s;
+}
+
+div.box:hover > div.sq > div.sq1-border-height {
+    width: 100%;
+}
+
+div.box:hover > div.sq > div.sq1-border-width {
+    height: 100%;
+}
+
+div.box:hover > div.sq > div.sq2-border-height {
+    width: 100%;
+}
+
+div.box:hover > div.sq > div.sq2-border-width {
+    height: 100%;
+}
